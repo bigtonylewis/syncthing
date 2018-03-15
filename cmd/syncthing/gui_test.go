@@ -848,6 +848,12 @@ func TestAddressIsLocalhost(t *testing.T) {
 		{"LOCALHOST:8000", true},
 		{"[::1]:8080", true},
 		{"127.0.0.1:8080", true},
+		{"127.0.0.1:8080", true},
+		{"127.0.0.1:8080", true},
+		{"127.0.0.1:8080", true},
+		{"127.1.0.1:8080", true},
+		{"127.5.6.7:8080", true},
+		{"127.254.254.254:8080", true},
 
 		// These are all non-localhost addresses
 		{"example.com", false},
